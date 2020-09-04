@@ -1,0 +1,26 @@
+.support{
+	padding-top: 50px;
+	overflow: hidden;
+	background-color: $aqua-blue;
+	text-align: center;
+	.title-big, p{
+		color: $white;
+	}
+	p{
+		padding: 20px 0 40px;
+		@media (min-width: 768px){
+			padding: 40px 0 80px;
+		}
+	}
+	picture{
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		img{
+			margin-bottom: -10px;
+		}
+	}
+	@media (min-width: 768px){
+		padding-top: 100px;
+	}
+}

@@ -1,0 +1,25 @@
+.cta{
+	padding: 40px 0;
+	text-align: center;
+	.title{
+		font-weight: bold;
+		color: $grey-1;
+	}
+	p{
+		padding: 20px 0;
+		line-height: 1.875rem;
+		color: $grey-2;
+		@media (min-width: 768px){
+			padding: 40px 0;
+		}
+	}
+	button{
+		margin: auto;
+	}
+	@media (min-width: 576px){
+		padding: 55px 0;
+	}
+	@media (min-width: 768px){
+		padding: 70px 0;
+	}
+}

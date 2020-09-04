@@ -1,0 +1,156 @@
+/* Global */
+html{
+	overflow-x: hidden;
+}
+body{
+	min-width: 320px;
+	padding: 0;
+	margin: 0;
+	color: #000;
+	font-family: 'Lato', serif;
+	font-weight: normal;
+	overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, p{
+	font-family: 'Lato', serif;
+	font-weight: normal;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: bold;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+	font-weight: 900;
+}
+b {
+	font-weight: bold;
+}
+a {
+	display: inline-flex;
+	transition: all .3s ease;
+	text-decoration: none;
+}
+a:hover {
+	color: inherit;
+}
+strong{
+	font-weight: 900;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+button{
+	outline: none;
+	cursor: pointer;
+	transition: all ease .3s;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	height: 60px;
+	width: 285px;
+	border: none;
+	border-bottom: 5px solid $copper;
+	background-color: $light-brown;
+	text-transform: uppercase;
+	font-family: 'Lato', serif;
+	font-size: 1rem;
+	color: $white;
+	span{
+		position: relative;
+		z-index: 1;
+		font-family: 'Lato', serif;
+		font-size: 1rem;
+		color: $white;
+		@media (min-width: 768px){
+			font-size: 1.125rem;
+		}
+		@media (min-width: 1200px){
+			font-size: 1.25rem;
+		}
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 0%;
+		width: 100%;
+		transition: .3s;
+		background-color: $copper;
+		border-radius: 50% 50% 0 0;
+	}
+	&:hover:before{
+		height: 180%;
+	}
+	&:active{
+		border-bottom: 0;
+		transform: translateY(5px);
+	}
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+iframe {
+	max-width: 100%;
+}
+
+h1 {font-size: 2rem;}
+h2 {font-size: 1.75rem;}
+h3 {font-size: 1.5rem;}
+h4 {font-size: 1.25rem;}
+h5 {font-size: 1.125rem;}
+h6 {font-size: 1rem;}
+p {font-size: .875rem;}
+i {font-size: .875rem;}
+@media (min-width: 576px) {
+	h1 {font-size: 2.25rem;}
+	h2 {font-size: 2rem;}
+	h3 {font-size: 1.75rem;}
+	h4 {font-size: 1.5rem;}
+	h5 {font-size: 1.25rem;}
+	p {font-size: 1rem;}
+	i {font-size: 1rem;}
+}
+@media (min-width: 768px) {
+	h1 {font-size: 2.75rem;}
+	h2 {font-size: 2.25rem;}
+	h3 {font-size: 2rem;}
+	h4 {font-size: 1.5rem;}
+	h5 {font-size: 1.25rem;}
+}
+@media (min-width: 992px) {
+	h1 {font-size: 3rem;}
+	h2 {font-size: 3.25rem;}
+	h3 {font-size: 3rem;}
+	h4 {font-size: 2rem;}
+	p {font-size: 1.125rem;}
+	i {font-size: 1.125rem;}
+}
+@media (min-width: 1200px) {
+	h5 {font-size: 1.5rem;}
+}
+
+.title-big{
+	@media (min-width: 1200px){
+		font-size: 3rem;
+		font-weight: 900;
+	}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
