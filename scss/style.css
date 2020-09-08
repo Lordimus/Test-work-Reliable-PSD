@@ -363,7 +363,8 @@ ul, ol {
   list-style-type: none;
 }
 
-button {
+button,
+.button {
   outline: none;
   cursor: pointer;
   transition: all ease .3s;
@@ -379,8 +380,11 @@ button {
   font-family: 'Lato', serif;
   font-size: 1rem;
   color: #fff;
+  text-align: center;
+  line-height: 60px;
 }
-button span {
+button span,
+.button span {
   position: relative;
   z-index: 1;
   font-family: 'Lato', serif;
@@ -388,16 +392,19 @@ button span {
   color: #fff;
 }
 @media (min-width: 768px) {
-  button span {
+  button span,
+  .button span {
     font-size: 1.125rem;
   }
 }
 @media (min-width: 1200px) {
-  button span {
+  button span,
+  .button span {
     font-size: 1.25rem;
   }
 }
-button:before {
+button:before,
+.button:before {
   content: '';
   position: absolute;
   left: 0;
@@ -408,10 +415,12 @@ button:before {
   background-color: #ba8e5b;
   border-radius: 50% 50% 0 0;
 }
-button:hover:before {
+button:hover:before,
+.button:hover:before {
   height: 180%;
 }
-button:active {
+button:active,
+.button:active {
   border-bottom: 0;
   transform: translateY(5px);
 }
@@ -512,18 +521,6 @@ i {
     font-size: 3rem;
   }
 
-  h2 {
-    font-size: 3.25rem;
-  }
-
-  h3 {
-    font-size: 3rem;
-  }
-
-  h4 {
-    font-size: 2rem;
-  }
-
   p {
     font-size: 1.125rem;
   }
@@ -542,6 +539,17 @@ i {
     font-size: 3rem;
     font-weight: 900;
   }
+}
+
+.icon {
+  font-family: SocialIcons;
+}
+
+.icon:before {
+  font-size: 30px;
+  font-style: normal;
+  content: attr(data-icon);
+  speak: none;
 }
 
 @keyframes fadeIn {
@@ -669,6 +677,7 @@ header .header-wrap .container .menu ul {
 }
 header .header-wrap .container .menu ul.active {
   display: block;
+  z-index: 10;
 }
 @media (min-width: 992px) {
   header .header-wrap .container .menu ul.active {
@@ -795,6 +804,9 @@ header .header-wrap .container .menu ul li a:hover:before {
     margin: 5px 20px;
     border-bottom: none;
   }
+  header .header-wrap .container .menu ul li:last-of-type {
+    margin-right: 0;
+  }
 }
 header .header-wrap .container .menu ul li:last-of-type {
   border-bottom: none;
@@ -813,14 +825,14 @@ header .header-wrap .container .menu ul li:last-of-type {
 
 .banner {
   padding-top: 120px;
-  background-image: url(../img/jared-sluyter-342881@1x.jpg);
+  background-image: url(../img/main-banner@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 40% 50%;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2 dppx) {
   .banner {
-    background-image: url(../img/jared-sluyter-342881@2x.jpg);
+    background-image: url(../img/main-banner@2x.jpg);
   }
 }
 .banner .container .content {
@@ -834,24 +846,22 @@ header .header-wrap .container .menu ul li:last-of-type {
   color: #fff;
 }
 .banner .container .content .title-big span {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 5px solid #00b5d2;
 }
 @media (min-width: 768px) {
   .banner .container .content .title-big span {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 }
 .banner .container .content p {
   padding: 25px 0;
   color: #fff;
   line-height: 30px;
-  text-shadow: 0px 0px 5px #000000;
 }
 @media (min-width: 768px) {
   .banner .container .content p {
-    padding: 50px 0;
-    text-shadow: none;
+    padding: 45px 0;
   }
 }
 @media (min-width: 768px) {
@@ -878,6 +888,9 @@ header .header-wrap .container .menu ul li:last-of-type {
 .partners .content picture {
   padding: 15px 10px;
 }
+.partners .content picture img {
+  max-height: 45px;
+}
 @media (min-width: 768px) and (max-width: 1200px) {
   .partners .content picture {
     display: flex;
@@ -895,6 +908,11 @@ header .header-wrap .container .menu ul li:last-of-type {
     justify-content: space-between;
   }
 }
+@media (min-width: 1140px) {
+  .partners .content {
+    flex-wrap: nowrap;
+  }
+}
 
 .support {
   padding-top: 50px;
@@ -910,13 +928,15 @@ header .header-wrap .container .menu ul li:last-of-type {
 }
 @media (min-width: 768px) {
   .support p {
-    padding: 40px 0 80px;
+    padding: 45px 0 75px;
   }
 }
 .support picture {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin: auto;
+  width: 83%;
 }
 .support picture img {
   margin-bottom: -10px;
@@ -945,7 +965,7 @@ header .header-wrap .container .menu ul li:last-of-type {
     padding: 40px 0;
   }
 }
-.cta button {
+.cta .button {
   margin: auto;
 }
 @media (min-width: 576px) {
@@ -963,14 +983,14 @@ header .header-wrap .container .menu ul li:last-of-type {
   position: relative;
   padding-top: 50px;
   margin-bottom: 50px;
-  background-image: url(../img/Group-3-copy@1x.jpg);
+  background-image: url(../img/sliderbg@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2 dppx) {
   .slider {
-    background-image: url(../img/Group-3-copy@2x.jpg);
+    background-image: url(../img/sliderbg@2x.jpg);
   }
 }
 @media (min-width: 576px) {
@@ -988,6 +1008,9 @@ header .header-wrap .container .menu ul li:last-of-type {
 .slider .slick-slider {
   position: relative;
   bottom: -20px;
+}
+.slider .slick-slider img {
+  width: 100%;
 }
 @media (min-width: 576px) {
   .slider .slick-slider {
@@ -1008,14 +1031,14 @@ header .header-wrap .container .menu ul li:last-of-type {
 .team .img-bg {
   min-height: 200px;
   width: 100%;
-  background-image: url(../img/Picture@1x.jpg);
+  background-image: url(../img/team@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right center;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2 dppx) {
   .team .img-bg {
-    background-image: url(../img/Picture@2x.jpg);
+    background-image: url(../img/team@2x.jpg);
   }
 }
 @media (min-width: 992px) {
@@ -1033,21 +1056,21 @@ header .header-wrap .container .menu ul li:last-of-type {
   max-width: 535px;
 }
 .team .content .title-big {
-  padding: 20px 0 25px;
+  padding: 15px 0;
   color: #fff;
 }
 .team .content .title-big span {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 4px solid #00b5d2;
 }
 @media (min-width: 992px) {
   .team .content .title-big span {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 @media (min-width: 992px) {
   .team .content .title-big {
-    padding: 40px 0 45px;
+    padding: 25px 0;
   }
 }
 .team .content p, .team .content i {
@@ -1058,22 +1081,22 @@ header .header-wrap .container .menu ul li:last-of-type {
     line-height: 1.875rem;
   }
 }
-.team .content button {
-  margin-top: 25px;
+.team .content .button {
+  margin-top: 20px;
   background-color: #00b5d2;
   border-bottom-color: #008ea5;
 }
-.team .content button:before {
+.team .content .button:before {
   background-color: #008ea5;
 }
 @media (min-width: 992px) {
-  .team .content button {
-    margin-top: 45px;
+  .team .content .button {
+    margin-top: 40px;
   }
 }
 @media (min-width: 992px) {
   .team .content {
-    width: 50%;
+    width: 45%;
     padding: 40px 30px;
   }
 }
@@ -1115,18 +1138,17 @@ footer .content .social {
 footer .content .social a {
   margin: 25px;
 }
-footer .content .social a img {
-  height: 20px;
-  width: 20px;
+footer .content .social a i {
+  font-size: 20px;
   color: #666;
 }
-footer .content .social a img:hover {
+footer .content .social a i:hover {
   color: initial;
 }
 footer .content .contact-info {
   text-align: center;
 }
-footer .content .contact-info > * {
+footer .content .contact-info p, footer .content .contact-info .contact-info-link {
   display: block;
   margin-bottom: 20px;
 }

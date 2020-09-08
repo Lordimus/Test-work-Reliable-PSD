@@ -46,6 +46,7 @@ header{
 					animation: fadeIn ease .25s;
 					&.active{
 						display: block;
+						z-index: 10;
 						@media (min-width: 992px) {
 							display: inline-flex;
 						}
@@ -159,6 +160,9 @@ header{
 						@media (min-width: 992px) {
 							margin: 5px 20px;
 							border-bottom: none;
+							&:last-of-type{
+								margin-right: 0;
+							}
 						}
 						&:last-of-type{
 							border-bottom: none;

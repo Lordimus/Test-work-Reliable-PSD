@@ -28,9 +28,8 @@ footer{
 			margin-bottom: 20px;
 			a{
 				margin: 25px;
-				img{
-					height: 20px;
-					width: 20px;
+				i{
+					font-size: 20px;
 					color: #666;
 					&:hover{
 						color: initial;
@@ -40,7 +39,7 @@ footer{
 		}
 		.contact-info{
 			text-align: center;
-			& > *{
+			p, .contact-info-link{
 				display: block;
 				margin-bottom: 20px;
 			}

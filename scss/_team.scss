@@ -5,12 +5,12 @@
 	.img-bg{
 		min-height: 200px;
 		width: 100%;
-		background-image: url(../img/Picture@1x.jpg);
+		background-image: url(../img/team@1x.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: right center;
 		@include retina {
-			background-image: url(../img/Picture@2x.jpg);
+			background-image: url(../img/team@2x.jpg);
 		}
 		@media (min-width: 992px){
 			min-height: initial;
@@ -25,17 +25,17 @@
 			max-width: 535px;
 		}
 		.title-big{
-			padding: 20px 0 25px;
+			padding: 15px 0;
 			color: $white;
 			span{
-				padding-bottom: 10px;
+				padding-bottom: 5px;
 				border-bottom: 4px solid $aqua-blue;
 				@media (min-width: 992px){
-					padding-bottom: 20px;
+					padding-bottom: 10px;
 				}
 			}
 			@media (min-width: 992px){
-				padding: 40px 0 45px;
+				padding: 25px 0;
 			}
 		}
 		p, i{
@@ -44,19 +44,19 @@
 				line-height: 1.875rem;
 			}
 		}
-		button{
-			margin-top: 25px;
+		.button{
+			margin-top: 20px;
 			background-color: $aqua-blue;
 			border-bottom-color: $azure-gray;
 			&:before{
 				background-color: $azure-gray;
 			}
 			@media (min-width: 992px){
-				margin-top: 45px;
+				margin-top: 40px;
 			}
 		}
 		@media (min-width: 992px){
-			width: 50%;
+			width: 45%;
 			padding: 40px 30px;
 		}
 	}

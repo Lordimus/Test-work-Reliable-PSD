@@ -46,7 +46,8 @@ ul, ol {
 	padding: 0;
 	list-style-type: none;
 }
-button{
+button,
+.button{
 	outline: none;
 	cursor: pointer;
 	transition: all ease .3s;
@@ -62,6 +63,8 @@ button{
 	font-family: 'Lato', serif;
 	font-size: 1rem;
 	color: $white;
+	text-align: center;
+	line-height: 60px;
 	span{
 		position: relative;
 		z-index: 1;
@@ -128,9 +131,6 @@ i {font-size: .875rem;}
 }
 @media (min-width: 992px) {
 	h1 {font-size: 3rem;}
-	h2 {font-size: 3.25rem;}
-	h3 {font-size: 3rem;}
-	h4 {font-size: 2rem;}
 	p {font-size: 1.125rem;}
 	i {font-size: 1.125rem;}
 }
@@ -143,6 +143,16 @@ i {font-size: .875rem;}
 		font-size: 3rem;
 		font-weight: 900;
 	}
+}
+
+.icon{
+	font-family: SocialIcons;
+}
+.icon:before{
+	font-size: 30px;
+	font-style: normal;
+	content: attr(data-icon);
+	speak: none;
 }
 
 @keyframes fadeIn {

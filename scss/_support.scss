@@ -9,13 +9,15 @@
 	p{
 		padding: 20px 0 40px;
 		@media (min-width: 768px){
-			padding: 40px 0 80px;
+			padding: 45px 0 75px;
 		}
 	}
 	picture{
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
+		margin: auto;
+		width: 83%;
 		img{
 			margin-bottom: -10px;
 		}
